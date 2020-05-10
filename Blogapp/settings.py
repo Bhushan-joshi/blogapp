@@ -128,12 +128,7 @@ STATIC_URL = '/static/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST='smtp-relay.gmail.com'
-EMAIL_PORT=465 #587 for tls
-EMAIL_USE_SSL=True
-EMAIL_HOST_USER=os.environ.get('Email')
-EMAIL_HOST_PASSWORD=os.environ.get('password')
+
 
 
 #setting for external apps.
