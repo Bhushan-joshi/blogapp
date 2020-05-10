@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!-- ###############################======heading========################################################# -->
+
+<!-- ###############################======blogpost========################################################ -->
+<div class="container mt-3">
+
+
+    {% for data in udata %}
+        <article class="media content-section">
+            <img class="rounded-circle article-img"  src="{{ data.author.profile.image.url }}">
+            <div class="media-body">
+                <div class="article-metadata">
+                    <a class="mr-2" >{{ data.author }}</a>
+                    <small class="text-muted">{{ data.date_posted|date:"F d, Y" }}</small>
+                </div>
+                <h2><a class="article-title" href="{% url 'detail_view' data.id %}">{{ data.title }}</a></h2>
+                <p class="article-content">{{ data.post_data }}</p>
+            </div>
+        </article>
+    {% endfor %}
+</div>
+</div>
+
+{% endblock content %}

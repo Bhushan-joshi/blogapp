@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container jumbotron text-center">
+    <h3 > logged out</h3>
+    <h1 >
+        Thanks for visiting
+    </h1>
+<p class="text-muted ">login again <a href="{% url 'login' %}" class="btn btn-primary btn-sm">login</a> </p>
+
+</div>
+{% endblock content %}

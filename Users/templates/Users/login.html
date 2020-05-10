@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="text-center container pt-4">
+    <div class="row ">
+        <div class="col-4"></div>
+        <div class="col-4">
+            <form class="form-signin" action="" method="POST">
+                {% csrf_token %}
+                <!-- <img class="mb-4" src="images/brand.png " alt="" width="72" height="72"> -->
+                <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+                <input name="username" type="username" id="inputEmail" class="form-control" placeholder="Username" required autofocus>
+                <input name="password" type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                <div class="checkbox mb-3">
+                    <label>
+                        <input type="checkbox" value="remember-me"> Remember me
+                    </label>
+                </div>
+                <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+                <a class="btn btn-outline-dark btn-block btn-lg" href="{% url 'register' %}">Create an account</a>
+                
+                <p class="mt-5 mb-3 text-muted">&copy; {%now "Y"%}</p>
+            </form>
+        </div>
+        <div class="col-4"></div>
+    </div>
+</div>
+{% endblock content %}
